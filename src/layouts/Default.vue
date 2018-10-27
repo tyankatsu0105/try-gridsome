@@ -47,5 +47,6 @@ body {
 
 .nav__link {
   margin-left: 20px;
+  color: $color-primary;
 }
 </style>
