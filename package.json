@@ -44,9 +44,15 @@
         "stylelint --fix --cache --cache-location '.stylelintcache'",
         "git add"
       ],
-      "*.{js,vue}": [
+      "*.js": [
         "prettier --write",
         "eslint --fix --cache --cache-location '.eslintcache'",
+        "git add"
+      ],
+      "*.vue": [
+        "prettier --write",
+        "eslint --fix --cache --cache-location '.eslintcache'",
+        "stylelint --fix --cache --cache-location '.stylelintcache'",
         "git add"
       ],
       "*.md": [

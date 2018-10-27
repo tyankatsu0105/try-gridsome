@@ -1,31 +1,36 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link :to="{ name: 'home' }">Gridsome</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
-        <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+	<div class="layout">
+		<header class="header">
+			<strong>
+				<g-link :to="{ name: 'home' }">Gridsome</g-link>
+			</strong>
+			<nav class="nav">
+				<g-link 
+					:to="{ name: 'home' }" 
+					class="nav__link">Home</g-link>
+				<g-link 
+					:to="{ name: 'about' }" 
+					class="nav__link">About</g-link>
+			</nav>
+		</header>
+		<slot></slot>
+	</div>
 </template>
 
 <style lang="scss">
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
 }
 
 .layout {
   max-width: 600px;
-  margin: 0 auto;
-  padding-left: 20px;
   padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
 
   .header {
     font-size: 4rem;
@@ -34,10 +39,10 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: space-between;
   height: 80px;
+  margin-bottom: 20px;
 }
 
 .nav__link {
