@@ -144,6 +144,7 @@ $RECYCLE.BIN/
 .node-version
 .eslintcache
 .stylelintcache
+config/*
 # copy by gridsome create gitignore
 *.log
 .cache
