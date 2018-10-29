@@ -13,7 +13,14 @@
 					class="nav__link">About</g-link>
 			</nav>
 		</header>
-		<slot></slot>
+		<transition-group 
+			name="page" 
+			tag="div" 
+			appear>
+			<main key="main">
+				<slot></slot>
+			</main>
+		</transition-group>
 	</div>
 </template>
 
@@ -37,24 +44,13 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
-}
-
+<style lang="scss" scoped>
+@import "@/styles/utility/transition-page.scss";
 .layout {
   max-width: 600px;
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
-
-  .header {
-    font-size: 4rem;
-  }
 }
 
 .header {
@@ -63,6 +59,11 @@ body {
   justify-content: space-between;
   height: 80px;
   margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
 }
 
 .nav__link {

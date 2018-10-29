@@ -1,14 +1,41 @@
 <template>
 	<Layout>
-		<g-image 
-			alt="Example image" 
-			src="@/favicon.png" 
-			width="135" />
-		<h1>Hello, world!</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
+		<ul>
+			<li 
+				v-for="{ node } in $page.allWordPressPost.edges" 
+				:key="node._id">
+				<h2>{{ node.title }}</h2>
+				<g-link :to="node.path">Read more</g-link>
+			</li>
+		</ul>
+		<Pager :info="$page.allWordPressPost.pageInfo" />
 	</Layout>
 </template>
 
 <script>
-export default {};
+import { Pager } from "gridsome";
+
+export default {
+  components: {
+    Pager
+  }
+};
 </script>
+
+<page-query>
+query Blog ($page: Int) {
+  allWordPressPost (perPage: 10, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
+    edges {
+      node {
+        _id
+        title
+        path
+      }
+    }
+  }
+}
+</page-query>

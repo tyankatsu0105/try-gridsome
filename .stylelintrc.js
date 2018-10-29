@@ -14,6 +14,7 @@ module.exports = {
         ignore: ["attribute"]
       }
     ],
-    "scss/selector-no-redundant-nesting-selector": null
+    "scss/selector-no-redundant-nesting-selector": null,
+    "scss/at-import-partial-extension-blacklist": null
   }
 };
