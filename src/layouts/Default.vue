@@ -15,11 +15,11 @@
 		</header>
 		<transition-group 
 			name="page" 
-			tag="div" 
+			tag="main" 
 			appear>
-			<main key="main">
+			<div key="main">
 				<slot></slot>
-			</main>
+			</div>
 		</transition-group>
 	</div>
 </template>
