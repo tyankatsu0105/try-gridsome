@@ -7,8 +7,8 @@
     "develop:dev": "run-s env-develop gs:develop",
     "develop:prod": "run-s env-production gs:develop",
     "explore": "gridsome explore",
-    "env-develop": "cp config/env/.env.develop ./.env",
-    "env-production": "cp config/env/.env.production ./.env",
+    "env-develop": "cp env/.env.develop ./.env",
+    "env-production": "cp env/.env.production ./.env",
     "commit": "git-cz",
     "precommit": "lint-staged",
     "format": "fixpack"
