@@ -145,6 +145,7 @@ $RECYCLE.BIN/
 .eslintcache
 .stylelintcache
 .env*
+env.tar
 # copy by gridsome create gitignore
 *.log
 .cache
