@@ -1,6 +1,7 @@
 {
   "name": "my-gridsome-site",
   "scripts": {
+    "test": "echo 'this is test'",
     "gs:build": "gridsome build",
     "build": "run-s env-production gs:build",
     "gs:develop": "gridsome develop",
