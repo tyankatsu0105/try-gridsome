@@ -11,7 +11,6 @@ module.exports = {
     "vue/component-name-in-template-casing": "PascalCase",
     "vue/html-closing-bracket-newline": "error",
     "vue/html-closing-bracket-spacing": "error",
-    "vue/html-indent": ["error", "tab"],
     "vue/html-self-closing": [
       "error",
       {
@@ -22,16 +21,6 @@ module.exports = {
     ],
     "vue/no-multi-spaces": "error",
     "vue/attributes-order": "error",
-    "vue/order-in-components": "error",
-    "vue/max-attributes-per-line": [
-      2,
-      {
-        singleline: 1,
-        multiline: {
-          max: 1,
-          allowFirstLine: false
-        }
-      }
-    ]
+    "vue/order-in-components": "error"
   }
 };
