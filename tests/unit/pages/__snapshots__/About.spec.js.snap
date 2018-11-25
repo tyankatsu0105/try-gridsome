@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About.vue render 1`] = `
+<layout>
+  <h1>About us</h1>
+</layout>
+`;

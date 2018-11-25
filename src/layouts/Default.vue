@@ -1,27 +1,27 @@
 <template>
-	<div class="layout">
-		<header class="header">
-			<strong>
-				<g-link :to="{ name: 'home' }">Gridsome</g-link>
-			</strong>
-			<nav class="nav">
-				<g-link 
-					:to="{ name: 'home' }" 
-					class="nav__link">Home</g-link>
-				<g-link 
-					:to="{ name: 'about' }" 
-					class="nav__link">About</g-link>
-			</nav>
-		</header>
-		<transition-group 
-			name="page" 
-			tag="main" 
-			appear>
-			<div key="main">
-				<slot></slot>
-			</div>
-		</transition-group>
-	</div>
+  <div class="layout">
+    <header class="header">
+      <strong>
+        <g-link :to="{ name: 'home' }">Gridsome</g-link>
+      </strong>
+      <nav class="nav">
+        <g-link 
+          :to="{ name: 'home' }" 
+          class="nav__link">Home</g-link>
+        <g-link 
+          :to="{ name: 'about' }" 
+          class="nav__link">About</g-link>
+      </nav>
+    </header>
+    <transition-group 
+      name="page" 
+      tag="main" 
+      appear>
+      <div key="main">
+        <slot></slot>
+      </div>
+    </transition-group>
+  </div>
 </template>
 
 <script>
